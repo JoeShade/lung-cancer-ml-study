@@ -1,25 +1,72 @@
-# Local virtual environment
+# Local virtual environments
 .venv/
+.venv*/
+venv/
+env/
+ENV/
 
-# Python cache files
+# Python cache and build outputs
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
+.eggs/
+build/
+dist/
+pip-wheel-metadata/
 
-# Pytest and coverage outputs
+# Test, coverage, and lint caches
 .pytest_cache/
 .coverage
 .coverage.*
 htmlcov/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
 
-# Generated notebook test export
+# Generated notebook/test outputs
 tests/notebook_code.py
-
-# Jupyter local checkpoints
 .ipynb_checkpoints/
-
-# Exported notebook PDF
+*.nbconvert.ipynb
 LungCancerML.pdf
 
-# Large generated search artifact kept local only
+# Large or temporary analysis artifacts
 artifacts/gaussian_nb_grid_search_ranked.csv
+artifacts/tmp/
+artifacts/temp/
+artifacts/*.tmp
+artifacts/*.temp
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+*_secret.*
+secrets.*
+credentials.*
+token.*
+tokens.*
+
+# Local editor and OS noise
+.idea/
+.vscode/*.local.json
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Generic temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+~$*
+.~lock.*
